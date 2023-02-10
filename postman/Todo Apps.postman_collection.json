@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "0b0b64a2-5be5-4246-a1de-8aaa9c8b698a",
+		"name": "Todo Apps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24862043"
+	},
+	"item": [
+		{
+			"name": "Todo List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localUrl}}/todo",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Todo List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/todo",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:46:50 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "413"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": [\n        {\n            \"id\": \"695a4be336ff4910af03847cf4c70581\",\n            \"title\": \"sample title\",\n            \"description\": \"sample sample\",\n            \"finished_at\": null,\n            \"created_at\": \"2023-02-10 14:45:59\",\n            \"updated_at\": null,\n            \"delete_at\": null\n        },\n        {\n            \"id\": \"932f10840a09452f88b38f31fc9ee39c\",\n            \"title\": \"sample title 2\",\n            \"description\": \"sample sample\",\n            \"finished_at\": null,\n            \"created_at\": \"2023-02-10 14:46:45\",\n            \"updated_at\": null,\n            \"delete_at\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localUrl}}/todo/:id",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "695a4be336ff4910af03847cf4c70581"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Todo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/todo/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:46:34 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "225"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": {\n        \"id\": \"695a4be336ff4910af03847cf4c70581\",\n        \"title\": \"sample title\",\n        \"description\": \"sample sample\",\n        \"finished_at\": null,\n        \"created_at\": \"2023-02-10 14:45:59\",\n        \"updated_at\": null,\n        \"delete_at\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"sample title\",\n    \"description\":\"sample sample\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/todo",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"sample title\",\n    \"description\":\"sample sample\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:45:59 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "58"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": {\n        \"success\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localUrl}}/todo/:id",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "695a4be336ff4910af03847cf4c70581"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Todo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/todo/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:41 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "58"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": {\n        \"success\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/todo/:id",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "695a4be336ff4910af03847cf4c70581"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Todo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:47:41 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "58"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": {\n        \"success\": true\n    }\n}"
+				},
+				{
+					"name": "Update but Finished",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:10 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "65"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 2,\n        \"comment\": \"Todo already finished\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Update but Deleted",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:10 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "65"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 2,\n        \"comment\": \"Todo already deleted\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Finish Todo",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{localUrl}}/todo/:id/finish",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"todo",
+						":id",
+						"finish"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "695a4be336ff4910af03847cf4c70581"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Finish Todo",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/todo/:id/finish",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id",
+								"finish"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:05 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "58"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 1,\n        \"comment\": \"ok\"\n    },\n    \"data\": {\n        \"success\": true\n    }\n}"
+				},
+				{
+					"name": "Finish but Deleted",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo/:id/finish",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id",
+								"finish"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:10 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "65"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 2,\n        \"comment\": \"Todo already deleted\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "Finish but Already Finished",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"updated one\",\n    \"description\":\"updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/todo/:id/finish",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"todo",
+								":id",
+								"finish"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "695a4be336ff4910af03847cf4c70581"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Fri, 10 Feb 2023 14:48:10 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "65"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": 2,\n        \"comment\": \"Todo already finished\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "http://localhost:1234",
+			"type": "string"
+		}
+	]
+}

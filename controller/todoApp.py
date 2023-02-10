@@ -65,8 +65,8 @@ class CTodo(Todo):
         for m in Todo.todo_list:
             if m["id"] == id:
                 try:
-                    if m["finished_at"] != None: raise Exception("Todo already finished")
                     if m["delete_at"] != None: raise Exception("Todo already deleted")
+                    if m["finished_at"] != None: raise Exception("Todo already finished")
                     m.update(item_verify)
                 except Exception as E:
                     error_catch = f"{E}"
@@ -106,8 +106,8 @@ class CTodo(Todo):
         for m in Todo.todo_list:
             if m["id"] == id:
                 try:
-                    if m["finished_at"] != None: raise Exception("Todo already finished")
                     if m["delete_at"] != None: raise Exception("Todo already deleted")
+                    if m["finished_at"] != None: raise Exception("Todo already finished")
                     m.update({"finished_at":datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
                 except Exception as E:
                     error_catch = f"{E}"

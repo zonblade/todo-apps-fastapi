@@ -58,6 +58,7 @@ class Todo(FastApi):
             verify   = json.loads(Todo.Update(**item).json())
             default  = Todo.default(id)
             if len(default) == 0: return None
+            default  = default[0]
             verify = {
                 **Todo.default(id),
                 **{

@@ -61,6 +61,7 @@ class CTodo(Todo):
     @Todo.router.put("/todo/{id}")
     async def update(item:Todo.request,id:str):
         item_verify = await Todo.Verify.update(id,item)
+        if not item_verify: return Todo.HttpResponse(None,code=3,comment="Todo not found")
         error_catch = None
         for m in Todo.todo_list:
             if m["id"] == id:

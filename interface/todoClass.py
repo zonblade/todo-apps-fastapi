@@ -38,7 +38,7 @@ class Todo(FastApi):
     makan akan mengambil value terbaru
     '''
     def default(id):
-        return list(filter(lambda x: x["id"] == id, Todo.todo_list))[0]
+        return list(filter(lambda x: x["id"] == id, Todo.todo_list))
         
     '''
     Jika ingin mengimplementasikan 
@@ -57,6 +57,7 @@ class Todo(FastApi):
             item     = await payload.json()
             verify   = json.loads(Todo.Update(**item).json())
             default  = Todo.default(id)
+            if len(default) == 0: return None
             verify = {
                 **Todo.default(id),
                 **{

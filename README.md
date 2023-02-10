@@ -17,3 +17,5 @@ pip install -r requirements.txt
 # run the apps
 python main.py
 ```
+
+todo apps ini dari challenge Soul Parking

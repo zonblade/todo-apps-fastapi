@@ -9,7 +9,7 @@ source bin/activate
 
 # clone the repo
 git clone https://github.com/zonblade/todo-apps-fastapi.git
-cd todo-apps-flask
+cd todo-apps-fastapi
 
 # initialize requirements
 pip install -r requirements.txt

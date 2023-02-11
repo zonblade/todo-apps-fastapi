@@ -8,7 +8,7 @@ cd your_folder
 source bin/activate
 
 # clone the repo
-git clone https://github.com/zonblade/todo-apps-flask.git
+git clone https://github.com/zonblade/todo-apps-fastapi.git
 cd todo-apps-flask
 
 # initialize requirements
